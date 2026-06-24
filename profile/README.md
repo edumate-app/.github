@@ -20,13 +20,13 @@ Each service can be developed independently, but the recommended way to run the 
 All repositories are separate:
 
 ```
-edumate-frontend
-edumate-backend
-edumate-nlp-service
-edumate-dev (infrastructure)
+frontend
+backend
+nlp-service
+.github (infrastructure)
 ```
 
-`edumate-dev` contains shared Docker configuration.
+`.github` contains shared Docker configuration.
 
 ---
 
@@ -35,20 +35,20 @@ edumate-dev (infrastructure)
 ### 1. Clone all repositories in one directory
 
 ```bash
-git clone https://github.com/edumate-app/edumate-backend
-git clone https://github.com/edumate-app/edumate-frontend
-git clone https://github.com/edumate-app/edumate-nlp-service
-git clone https://github.com/edumate-app/edumate-dev
+git clone https://github.com/edumate-app/backend
+git clone https://github.com/edumate-app/frontend
+git clone https://github.com/edumate-app/nlp-service
+git clone https://github.com/edumate-app/.github
 ```
 
 ---
 
 ### 2. Start infrastructure
 
-Go to `edumate-dev`:
+Go to `.github`:
 
 ```bash
-cd edumate-dev
+cd .github
 docker compose up --build
 ```
 
